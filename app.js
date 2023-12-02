@@ -11,9 +11,13 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// mongodb+srv://<username>:<password>@cluster0.uqt5lhi.mongodb.net/?retryWrites=true&w=majority
+
+// "mongodb+srv://cluster0.eyqzftt.mongodb.net/" --apiVersion 1 --username abdiahma3176
+// abdiahma3176:passwordhn@cluster0.eyqzftt.mongodb.net/yedatabsehn_sm
 async function connectToMongoDB() {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/todoList');
+    await mongoose.connect('mongodb+srv://abudiahmed2007:abudiahmed@cluster0.uqt5lhi.mongodb.net/todolistDB');
     console.log('Connected to MongoDB successfully');
     
     // Rest of the code inside connectToMongoDB function
